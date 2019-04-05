@@ -1,0 +1,225 @@
+@font-face {
+  font-family: "pp-sans-big-light";
+  font-display:swap;
+  src:  url('../fonts/pp-sans-big-light.woff2') format("woff2"),
+        url('../fonts/pp-sans-big-light.woff') format("woff");
+}
+
+@font-face {
+  font-family: "pp-sans-small-regular";
+  font-display:swap;
+  src:  url("../fonts/pp-sans-small-regular.woff2") format("woff2"),
+        url("../fonts/pp-sans-small-regular.woff") format("woff");
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#fp-nav ul li a span {
+  background-color: #1e1f1f !important;
+}
+
+.fp-tableCell {
+  vertical-align: top !important;
+}
+
+body {
+  font-family: "pp-sans-small-regular",Helvetica Neue,Arial,sans-serif;
+  background-color: #f7f9fa;
+  color: #2c2e2f;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
+h1 {
+  font-family: "pp-sans-big-light",Helvetica Neue,Arial,sans-serif;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1.25;
+  font-size: 4.28571429rem;
+  color: #fff;
+  margin: 0;
+}
+
+h2 {
+  font-family: "pp-sans-big-light",Helvetica Neue,Arial,sans-serif;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1.25;
+  font-size: 2.857rem;
+  margin: 0;
+}
+
+header {
+  padding-bottom: 50px;
+  padding-top: 20px;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.containerCentered {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: content-box;
+  min-width: 940px;
+  max-width: 1150px;
+}
+
+.containerCentered:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.face {
+  background: url('../images/header.jpg') #333 no-repeat center;
+  height: 50%;
+  background-size: cover;
+  margin-bottom: 70px;
+  padding: 50px;
+}
+
+.face p {
+  font-family: "pp-sans-big-light",Helvetica Neue,Arial,sans-serif;
+  color: #fff;
+  font-size: 1.71428571rem;
+  line-height: 1.625;
+  margin-top: 140px;
+  opacity: 0;
+  animation: show 2s .5s forwards;
+}
+
+.flippers-block {
+  padding-left: 3%;
+  padding-right: 3%;
+  margin-right: auto;
+  margin-left: auto;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  min-width: 940px;
+  max-width: 1150px;
+}
+
+.flip-container {
+  background-color: #fff;
+  width: 23.5%;
+  float: left;
+  box-sizing: border-box;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -o-perspective: 1000;
+  -ms-perspective: 1000px;
+  -ms-transform-style: preserve-3d;
+  perspective: 1000;
+  cursor: pointer;
+  margin-left: 2%;
+}
+
+.flip-container:first-child {
+  margin-left: 0;
+}
+
+.flipper {
+  transition: .6s;
+  transform-style: preserve-3d;
+  position: relative;
+  padding: 5%;
+}
+
+.flip-container:hover .flipper {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flipper .front {
+  z-index: 2;
+}
+
+.flipper .front img {
+  width: 125px;
+  height: 125px;
+}
+
+.flipper .front,
+.flipper .back {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  min-height: 200px;
+  width: 100%;
+}
+
+.flipper .back {
+  -ms-transform: rotateY(-180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  position: absolute;
+  background-image: radial-gradient(circle farthest-side at center bottom, #009cde, #003087 125%);
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 5% 0;
+}
+
+.flipper h2 {
+  padding-bottom: 24px;
+  font-size: 1.4287rem;
+  line-height: 1.25em;
+  letter-spacing: .01em;
+}
+
+.flipper .back h2 {
+  color: #fff;
+}
+
+.flipper .back p {
+  padding: 5%;
+  color: #fff;
+  margin: 0;
+  font-size: 1.071rem;
+  line-height: 1.5em;
+}
+
+.smaller-text {
+  font-size: 2.357rem;
+}
+
+footer {
+  background-color: #fff;
+  height: 80px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+footer p {
+  font-size: 20px;
+}
+
+hr {
+  background-image: linear-gradient(to right, #c0c0c0 50%, #fff0 40%);
+  background-position: top;
+  background-size: 3px 1px;
+  background-repeat: repeat-x;
+  height: 1px;
+  border-top: 0;
+  border-bottom: 0;
+  width: 90%;
+}
