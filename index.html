@@ -5,6 +5,7 @@
     <link rel="shortcut icon" href="favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="css/fullpage.min.css">
+    <link rel="stylesheet" type="text/css" href="css/chart.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <title>Innovation Lab</title>
   </head>
@@ -92,10 +93,7 @@
             <h2 class="smaller-text">If you would like to join in stealth mode to receive the latest updates and
             submitted ideas you can send a DM message to the slack bot</h2>
           </header>
-          <video width="1000" height="auto" autoplay loop muted data-keepplaying>
-            <source src="assets/video2.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+          <div id="chart"></div>
         </div>
         <footer>
           <p><b>Innovation Lab.</b> Join us #innovationlabsjc</p>
@@ -105,6 +103,8 @@
       </div>
     </div>
     <script src="js/fullpage.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
