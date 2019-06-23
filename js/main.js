@@ -44,7 +44,7 @@ var svg = d3.select("#chart").append("svg")
 
 svg.call(tip);
 
-fetch('http://demo2708427.mockable.io/users') //API request
+fetch('https://demo2708427.mockable.io/users') //API request
   .then(response => response.json())
   .then(json => {
     x.domain(json.map(function (d) { return d.name; })); //parse Name key for X axis
