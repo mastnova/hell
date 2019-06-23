@@ -10,13 +10,9 @@
   shape-rendering: crispEdges;
 }
 
-.bar {
-  fill: orange;
-}
-
 .bar:hover {
-  fill: orangered ;
-}
+  stroke: #242424 ;
+} 
 
 .x.axis path {
   display: none;

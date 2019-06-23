@@ -14,6 +14,8 @@ var margin = { top: 40, right: 20, bottom: 30, left: 40 },
 
 var formatPercent = d3.format(".1f"); // Value formats https://github.com/d3/d3-format
 
+var colorPool = d3.scale.category20();
+
 var x = d3.scale.ordinal()
   .rangeRoundBands([0, width], .1);
 
@@ -69,6 +71,7 @@ fetch('https://demo2708427.mockable.io/users') //API request
       .data(json)
       .enter().append("rect")
       .attr("class", "bar")
+      .attr("fill", function (d, i) { return colorPool(i); })
       .attr("x", function (d) { return x(d.name); }) //set X with Name key
       .attr("width", x.rangeBand())
       .attr("y", function (d) { return y(d.value); }) // set Y with Value key
