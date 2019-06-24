@@ -1,6 +1,7 @@
 const FP = new fullpage('#fullpage', {
   autoScrolling: true,
   navigation: true,
+  anchors: ["page1", "page2", "page3"]
 });
 
 document.getElementById('scroll-down').addEventListener('click', function () {
