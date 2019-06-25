@@ -56,7 +56,12 @@ fetch('https://demo2708427.mockable.io/users') //API request
     svg.append("g")
       .attr("class", "x axis")
       .attr("transform", "translate(0," + height + ")")
-      .call(xAxis);
+      .call(xAxis)
+      .selectAll("text")
+      .style("text-anchor", "end")
+      .attr("transform", function(d) {
+        return "rotate(-30)"
+      });
 
     svg.append("g")
       .attr("class", "y axis")
